@@ -1,27 +1,42 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
-
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
-
-// // Primer paso: declaro mi funcion
-// function myApp() {
-//   let who = ['The dog','My grandma','His turtle','My bird'];
-//   let action = ['ate','peed','crushed','broke'];
-//   let what = ['my homework', 'the keys', 'the car'];
-//   let when = ['before the class','right on time','when I finished','during my lunch','while I was praying'];
+// window.onload = function() {
+//   let who = ["The dog", "My grandma", "His turtle", "My bird"];
+//   let action = ["ate", "peed", "crushed", "broke"];
+//   let what = ["my homework", "the keys", "the car"];
+//   let when = [
+//     "before the class",
+//     "right on time",
+//     "when I finished",
+//     "during my lunch",
+//     "while I was praying"
+//   ];
 //   const whoRandom = who[Math.floor(Math.random() * who.length)];
 //   const actionRandom = action[Math.floor(Math.random() * action.length)];
 //   const whatRandom = what[Math.floor(Math.random() * what.length)];
 //   const whenRandom = when[Math.floor(Math.random() * when.length)];
-//   const onLoad = whoRandom + " " + actionRandom + " " +  whatRandom + " " + whenRandom;
-//   console.log(onLoad)
-//   }
-//   // Segundo Paso: ejecuto mi funcion
-//   myApp()
+//   const excuse =
+//     whoRandom + " " + actionRandom + " " + whatRandom + " " + whenRandom;
+
+//   document.getElementById("excuse").innerHTML = excuse;
+// };
+
+function excuseGenerator() {
+  let who = ["The dog", "My grandma", "His turtle", "My bird"];
+  let action = ["ate", "peed", "crushed", "broke"];
+  let what = ["my homework", "the keys", "the car"];
+  let when = [
+    "before the class",
+    "right on time",
+    "when I finished",
+    "during my lunch",
+    "while I was praying"
+  ];
+  const whoRandom = who[Math.floor(Math.random() * who.length)];
+  const actionRandom = action[Math.floor(Math.random() * action.length)];
+  const whatRandom = what[Math.floor(Math.random() * what.length)];
+  const whenRandom = when[Math.floor(Math.random() * when.length)];
+  const excuse =
+    whoRandom + " " + actionRandom + " " + whatRandom + " " + whenRandom;
+  document.getElementById("excuse").innerHTML = excuse;
+}
+
+document.getElementById("excuseButton").onclick = excuseGenerator;
